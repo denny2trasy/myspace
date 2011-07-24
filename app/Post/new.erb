@@ -1,0 +1,31 @@
+<div class="pageTitle">
+  <h1>New <%= @post.title %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a class="cancel" href="<%= url_for :action => :index %>">Cancel</a>
+  </div>
+</div>
+
+<div class="content">
+  <form method="POST" action="<%= url_for :action => :create %>">
+    <input type="hidden" name="id" value="<%= @post.object %>"/>
+    <ul>
+      
+          <li>
+            <label for="post[title]" class="fieldLabel">Title</label>
+            <input type="text" name="post[title]" <%=
+            placeholder("Title") %> />
+          </li>
+      
+          <li>
+            <label for="post[description]" class="fieldLabel">Description</label>
+            <input type="text" name="post[description]" <%=
+            placeholder("Description") %> />
+          </li>
+      
+    </ul>
+    <input type="submit" class="standardButton" value="Create"/>
+  </form>
+</div>

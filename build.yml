@@ -1,0 +1,21 @@
+sdk: "/Users/denny/.rvm/gems/ruby-1.9.2-p180/gems/rhodes-3.0.2"
+sdkversion: 3.0.1
+name: My Space
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+wmsdk: "Windows Mobile 6 Professional SDK (ARMV4I)"
+applog: rholog.txt
+iphone:
+  configuration: Debug
+  sdk: iphonesimulator4.3
+  provisionprofile:
+  codesignidentity:
+  entitlements:
+  BundleIdentifier: com.rhomobile.myspace
+  BundleURLScheme: myspace
+wp:
+  productid: '084f6b10-9444-012e-21ed-64ce8f09c94e'
+
+extensions: ["json", "another-extension"]

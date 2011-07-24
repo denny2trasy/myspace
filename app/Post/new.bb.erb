@@ -1,0 +1,29 @@
+<div id="pageTitle">
+    <h1>New Post</h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :index %>
+</div>
+
+
+<div id="content">
+
+    <form method="POST" action="<%= url_for :action => :create %>">
+	    <input type="hidden" name="id" value="<%= @post.object %>"/>
+        <table>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Title: </td>
+    			  <td class="itemValue"><input type="text" name="post[title]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Description: </td>
+    			  <td class="itemValue"><input type="text" name="post[description]"/></td>
+    		  </tr>
+    		
+        </table>
+        <input type="submit" class="standardButton" value="Create" />
+    </form>
+</div>
